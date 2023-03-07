@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+    <TextView
+        android:id="@+id/idEmpTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Employee"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="10dp"/>
+
+
+    <EditText
+        android:id="@+id/idEdtEmployeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginVertical="10dp"
+        android:hint="Enter Employee Name"
+        android:layout_below="@id/idEmpTxt"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/idEdtEmployeePhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeeName"
+        android:layout_margin="10dp"
+        android:hint="Enter employee phone number"
+        android:importantForAutofill="no"
+        android:inputType="phone" />
+
+
+    <EditText
+        android:id="@+id/idEdtEmployeeAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeePhoneNumber"
+        android:layout_margin="10dp"
+        android:hint="Enter employee address"
+        android:inputType="textPostalAddress" />
+
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnSendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeeAddress"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add employee details"
+        android:textAllCaps="false"
+        android:onClick="addData"/>
+
+</RelativeLayout>
+</RelativeLayout>
